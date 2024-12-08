@@ -173,7 +173,7 @@ fn main() -> Result<()> {
         .find(|m| m.name == mon.to_string() || mon.to_string() == "ALL" || mon.to_string() == "_")
     {
         log::error!("Unable to find monitor {mon}");
-        std::process::exit(0);
+        std::process::exit(1);
     }
 
     log::info!("Started with arg {}", mon);
